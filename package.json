@@ -57,6 +57,7 @@
     "docs:deploy": "cd docs-slate && ./deploy.sh",
     "predocs": "node docs/prepare-docs.mjs",
     "docs": "cd docs-slate && bundle exec middleman server",
+    "docs2": "documentation build dist/** -f html --github -o docs2",
     "preversion": "npm test && npm run build",
     "prepublishOnly": "npm run clean && npm test && npm run build"
   },
@@ -92,5 +93,8 @@
   },
   "engines": {
     "node": ">= 14"
+  },
+  "dependencies": {
+    "documentation": "^14.0.3"
   }
 }
