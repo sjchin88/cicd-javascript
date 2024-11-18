@@ -5,7 +5,7 @@ global:
     pipeline_name: "cicd_javascript"
     docker:
         registry: 'dockerhub'
-        image: "npm:latest"
+        image: "node:latest"
     artifact_upload_path: "temp"
 
 # default stages: [build, test, doc, deploy]
