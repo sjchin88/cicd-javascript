@@ -2,7 +2,7 @@
 # repo is set and cli does not specify repo and yml file by default
 # Test Pipeline for java repository
 global:
-    pipeline_name: "cicd_javascript"
+    pipeline_name: "cicd-javascript"
     docker:
         registry: 'dockerhub'
         image: "node:latest"
@@ -26,6 +26,7 @@ jobs:
         allow_failure: False
         needs: ['checkout']
         scripts:
+            - 'npm config set strict-ssl false'
             - 'npm ci'
             - 'npm run build'
 
@@ -42,7 +43,7 @@ jobs:
         allow_failure: True
         scripts:
             - 'npm run docs2'
-            
+
         artifacts:
             on_success_only: False
             paths:
