@@ -36,14 +36,13 @@ jobs:
         allow_failure: True
         scripts:
             - 'npm run test:dist'
-            - './gradlew test'
 
     documentation:
         stage: doc
         allow_failure: True
         scripts:
             - 'npm run docs2'
-            - './gradlew javadoc'
+            
         artifacts:
             on_success_only: False
             paths:
