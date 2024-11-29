@@ -1,6 +1,6 @@
 # Another valid configuration file that will be called when controller's
 # repo is set and cli does not specify repo and yml file by default
-# Test Pipeline for java repository
+# Test Pipeline for javascript repository
 global:
     pipeline_name: "cicd-javascript"
     docker:
